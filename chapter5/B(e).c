@@ -1,31 +1,27 @@
 #include<stdio.h>
 #include<conio.h>
 #include<math.h>
-int main(){
-	long int decimal, num, octal=0, reverse=0;
-	int  digit;
-	printf("Enter an integer : ");
-	scanf("%ld", &decimal);
-	num=decimal;
-	num=abs(num);
-	printf("num : %d\n",num);
-	while(num!=0){
-		digit=num%8;
-		num=num/8;
-		octal=octal*10+digit;
-		printf("%d",digit);
-	}
-	printf("\noctal:%d",octal);
-	printf("\n");
-	while(octal!=0){
-		digit=octal%10;
-		octal=octal/10;
-		reverse = 10*reverse + digit;
-	}
-	if(decimal>=0)
-		printf("%d", reverse);
-	else
-		printf("%d", reverse*-1);
-	getch();
-	return 0;
+long decimalToOctal(int);
+int main()
+{
+    int decimalnum;
+    printf("Enter a Decimal Number: ");
+    scanf("%d", &decimalnum);
+    printf("Equivalent Binary Number is: %ld", decimalToOctal(decimalnum));
+    getch();
+    return 0;
+}
+long decimalToOctal(int decimalnum)
+{
+    long octalnum = 0;
+    int rem, temp = 1;
+
+    while (decimalnum!=0)
+    {
+        rem = decimalnum%8;
+        decimalnum = decimalnum / 8;
+        octalnum = octalnum + rem*temp;
+        temp = temp * 10;
+    }
+    return octalnum;
 }
