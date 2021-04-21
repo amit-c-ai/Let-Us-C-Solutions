@@ -1,8 +1,12 @@
 ## [A]
 
-    (a) 3. A message from programmer to the preprocessor.
+   (a) 
+   
+    3. A message from programmer to the preprocessor.
       
-    (b) #define SQR(X) ( X * X ) 
+   (b)
+   
+    #define SQR(X) ( X * X ) 
    
    (c)
     
