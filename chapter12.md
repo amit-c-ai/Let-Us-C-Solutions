@@ -16,9 +16,13 @@
     4. False
     5. False
         
-    (d) 2. A file that contains definitions and macros.
+   (d) 
    
-    (e)  1. Before compilation of the program.
+    2. A file that contains definitions and macros.
+   
+   (e)  
+   
+    1. Before compilation of the program.
    
 
 ## [B]
