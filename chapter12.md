@@ -27,10 +27,12 @@
 ## [C]
 
 	(a) 
+
 		Before compilation, the source code is converted to expanded form and stored in a '.I' file. So we can open that file and find out how it 
                 is being expanded by the preprocessor.
 
 	(b)
+
         	#include<stdio.h>
 		#include<conio.h>
 		#include<math.h>
