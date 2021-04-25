@@ -6,10 +6,11 @@ int main(){
 	printf("Enter size of array: ");
 	scanf("%d", &max);
 	p = (int *) malloc(max * sizeof(int));
-	
-	for(i=0; i<max; i++){
+	printf("p: %d")
+	for(i=0; i<7; i++){
 		p[i] = i*i;
 		printf("%d ", p[i]);
 	}
+	printf("\nsize: %d", sizeof(p));
 	return 0;
 }

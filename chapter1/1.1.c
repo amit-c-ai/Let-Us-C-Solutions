@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<conio.h>
 int main(){
-	float bsalary;
+	float bsalary,printf;
 	float Dallowance,Rallowance,gross;
 	printf("Enter basic salary : ");
 	scanf("%f",&bsalary);
@@ -12,3 +12,4 @@ int main(){
 	getch();
 	return 0;
 }
+
