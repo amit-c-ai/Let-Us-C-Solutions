@@ -1,58 +1,112 @@
 #include<stdio.h>
-#include<stdlib.h>
-#include<stdbool.h>
-int len(int p[], int); 
-bool isEmpty();
-void retrieve_left();
-void retrieve_right();
-void insert_left();
-void insert_right();
-bool isFull();
-void show();
-int max;
-int main(){
-	char *l, *r, value, stop;
-	int i, chose;
-	printf("Enter size of dequeue: ");
-	scanf("%d", &max);
-	
-	l = (char *) malloc(max * sizeof(char));
-	r = l;
-	for(i=0; i<5; i++){
-		printf("%d ", l[i]);
-	}
-//	while(true){
-//		
-//		printf("1. Retrieve left\n2. Retrieve right\n3. Insert left\n4. Insert right\n5. Show\nChoose: ");
-//		scanf("%d", &chose);
-//	
-//		switch(chose){
-//			case 1:
-//				retrieve_left();
-//				break;
-//			case 2:
-//				retrieve_right();
-//				break;
-//			case 3:
-//				printf("Enter value: ");
-//				scanf("%c", &value);
-//				insert_left();
-//				break;
-//			case 4:
-//				printf("Enter value: ");
-//				scanf("%c", &value);
-//				insert_right();
-//				break;
-//			case 5:
-//				show();
-//				break;
-//			default:
-//				printf("\nWrong Choice\n");
-//		}
-//		printf("\nShow option (y/n): ");
-//		fflush(stdin);
-//		scanf("%c", &stop);
-//		if(stop=='n')
-//			break;
-//	}
+#include<conio.h>
+
+#define MAX 10
+
+void lAdd(int *l, int *q, int *r, int num);
+void rAdd(int *l, int *q, int *r, int num);
+void show(int *q, int *rside);
+int rFetch(int *l, int *q, int *r);
+int lFetch(int *l, int *q, int *r);
+
+int main()
+	{
+int que[MAX];
+int left, right;
+left = right = -1;
+
+rAdd(&left, que, &right, 10);
+rAdd(&left, que, &right, 20);
+rAdd(&left, que, &right, 30);
+show(que, &right);
+
+lAdd(&left, que, &right, 5);
+show(que, &right);
+
+lFetch(&left, que, &right);
+show(que, &right);
+
+rFetch(&left, que, &right);
+show(que, &right);
+
+_getch();
+return 0;
+}
+
+/*Insertion from right*/
+void rAdd(int *lside, int *q, int *rside, int num)
+{
+if (*rside == MAX - 1)
+{
+	printf("\nDequeue is full, no more insertion is possible.\n");
+	return;
+}
+
+if (*rside == -1)
+	*rside = 0;
+else
+	(*rside)++;
+q[*rside] = num;
+}
+
+/*Insertion from left*/
+void lAdd(int *lside, int *q, int *rside, int num)
+{
+int i;
+
+if (*rside == MAX - 1)
+{
+	printf("\nDequeue is full, no more insertion is possible.\n");
+	return;
+}
+
+for (i = *rside; i >= 0; i--)
+	q[i+1] = q[i];
+
+q[0] = num;
+
+if (*lside == -1)
+	*lside = 0;
+(*rside)++;
+}
+
+/*Dislays the list*/
+void show(int *q, int *rside)
+{
+int i;
+
+printf("\n\nList\n");
+for (i = 0; i <= *rside; i++)
+	printf("%d\t", q[i]);
+printf("\n\n");
+}
+
+/*Retrieval from left*/
+int lFetch(int *lside, int *q, int *rside)
+{
+int item = q[0], i;
+if (*rside == -1)
+{
+	printf("\nList is empty.\n");
+	return NULL;
+}
+
+for (i = 0; i < *rside; i++)
+	q[i] = q[i + 1];
+
+(*rside)--;
+return item;
+}
+
+/*Retrieval from right*/
+int rFetch(int *lside, int *q, int *rside)
+{
+if (*rside == -1)
+{
+	printf("\nList is empty.\n");
+	return NULL;
+}
+int item = q[*rside];
+(*rside)--;
+return item;
 }
