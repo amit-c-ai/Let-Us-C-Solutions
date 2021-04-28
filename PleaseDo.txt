@@ -1,2 +1,1 @@
 in special problems: 1) all types of sort(ex. binary sort)
-2) complete last problem of 13th chapter

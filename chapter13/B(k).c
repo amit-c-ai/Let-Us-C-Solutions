@@ -1,24 +1,21 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<stdbool.h>
-int len(int p[], int); 
-bool isEmpty(int);
-void retrieve_left(int p[], int, int);
-void retrieve_right(int p[], int, int);
-void insert_left(int p[], int, int, int);
-void insert_right(int p[], int , int , int);
-bool isFull(int, int);
-void show(int p[], int, int);
-int max;
+void insert_left(int *l, int *q, int *r, int num);
+void insert_right(int *l, int *q, int *r, int num);
+void show(int *q, int *rside);
+int retrieve_right(int *l, int *q, int *r);
+int retrieve_left(int *l, int *q, int *r);
+int MAX;
 int main(){
-	int *p, i, n, chose, value;
+	int *que, left, right, value, chose;
 	char stop;
-	printf("Enter the maximum size of dequeue: ");
-	scanf("%d", &max);
-	p = (int *) malloc(max * sizeof(int));
-	for(i=0; i<max; i++){
-		p[i]=0;
-	}
+	left = right = -1;
+	
+	printf("Enter size of queue: ");
+	scanf("%d", &MAX);
+	
+	que = (int *) malloc(MAX * sizeof(int));
 	
 	while(true){
 		printf("1. Retrieve left\n2. Retrieve right\n3. Insert left\n4. Insert right\n5. Show\nChoose: ");
@@ -26,23 +23,23 @@ int main(){
 	
 		switch(chose){
 			case 1:
-				retrieve_left(p, len(p, max), max);
+				retrieve_left(&left, que, &right);
 				break;
 			case 2:
-				retrieve_right(p, len(p, max), max);
+				retrieve_right(&left, que, &right);
 				break;
 			case 3:
 				printf("Enter value: ");
 				scanf("%d", &value);
-				insert_left(p, len(p, max), max, value);
+				insert_left(&left, que, &right, value);
 				break;
 			case 4:
 				printf("Enter value: ");
 				scanf("%d", &value);
-				insert_right(p, len(p, max), max, value);
+				insert_right(&left, que, &right, value);
 				break;
 			case 5:
-				show(p, len(p, max), max);
+				show(que, &right);
 				break;
 			default:
 				printf("\nWrong Choice\n");
@@ -53,109 +50,79 @@ int main(){
 		if(stop=='n')
 			break;
 	}
+
+	return 0;
 }
 
-int len(int p[], int max){
-	int i, count=0;
-	for(i=0; i<max; i++){
-		if(p[i]==0){
-			count++;
-		}
+/*Insertion from right*/
+void insert_right(int *lside, int *q, int *rside, int num){
+	if (*rside == MAX - 1)
+	{
+		printf("\nDequeue is full, no more insertion is possible.\n");
+		return;
 	}
-	return max-count;
+
+	if (*rside == -1)
+		*rside = 0;
+	else
+		(*rside)++;
+	q[*rside] = num;
 }
 
-bool isEmpty(int length){
-	if(length==0){
-		return true;
-	}
-	return false;
-}
-
-bool isFull(int length, int max){
-	printf("length: %d  max: %d\n", length, max);
-	if(length==max){
-		return true;
-	}
-	return false;
-}
-
-void show(int p[], int length, int max){
-	int i, j;
-	printf("show length: %d\n", length);
-	if(length==0){
-		printf("Empty array");
-	}
-	else{ 
-		for(i=0; i<length; i++){
-			if(p[i]!=0)
-				break;
-		}
-		for(j=i; j<max; j++){
-			if(p[j]!=0)
-				printf("%d  ", p[j]);
-		}		
-		printf("\nfull: ");
-		for(i=0; i<max; i++){
-				printf("%d  ", p[i]);
-		}
-	}
-}
-
-void retrieve_left(int p[], int length, int max){
+/*Insertion from left*/
+void insert_left(int *lside, int *q, int *rside, int num){
 	int i;
-	if(!isEmpty(length)){
-		for(i=0; i<max; i++){
-			if(p[i]!=0)
-				break;
-		}
-		p[i]=0;
+
+	if (*rside == MAX - 1)
+	{
+		printf("\nDequeue is full, no more insertion is possible.\n");
+		return;
 	}
-	else{
-		printf("/nDequeue Empty");
-	}
+
+	for (i = *rside; i >= 0; i--)
+		q[i+1] = q[i];
+
+	q[0] = num;
+
+	if (*lside == -1)
+		*lside = 0;
+	(*rside)++;
 }
 
-void retrieve_right(int p[], int length, int max){
+/*Dislays the list*/
+void show(int *q, int *rside){
 	int i;
-	if(!isEmpty(length)){
-		for(i=max-1; i>=0; i--){
-			if(p[i]!=0)
-				break;
-		}
-		p[i]=0;
-	}
-	else{
-		printf("/nDequeue Empty");
-	}
+
+	printf("\nList: \n");
+	for (i = 0; i <= *rside; i++)
+		printf("%d ", q[i]);
+	printf("\n");
 }
 
-void insert_left(int p[], int length, int max, int value){
-	printf("\ninsert length: %d\n", length);
-	if(!isFull(length, max)){
-		int i;
-		for(i=max; i>0; i--){
-//			k=p[i];
-			p[i]=p[i-1];
-		}
-		p[0]=value;
+/*Retrieval from left*/
+int retrieve_left(int *lside, int *q, int *rside){
+	int item = q[0], i;
+	if (*rside == -1)
+	{
+		printf("\nList is empty.\n");
+		return NULL;
 	}
-	else{
-		printf("\nDequeue Full");
-	}
+
+	for (i = 0; i < *rside; i++)
+		q[i] = q[i + 1];
+
+	(*rside)--;
+	return item;
 }
 
-void insert_right(int p[], int length, int max, int value){
-	int i;
-	if(!isFull(length, max)){
-		for(i=max; i>=0; i--){
-			if(p[i]!=0)
-				break;
-		}
-		p[i+1]=value;
+/*Retrieval from right*/
+int retrieve_right(int *lside, int *q, int *rside){
+	if (*rside == -1)
+	{
+		printf("\nList is empty.\n");
+		return NULL;
 	}
-	else{
-		printf("\nDequeue Full");
-	}
+	int item = q[*rside];
+	(*rside)--;
+	return item;
 }
-
