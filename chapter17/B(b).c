@@ -14,7 +14,7 @@ void below_100(bank arr[], int total){
 	int i;
 	printf("\n");
 	fflush(stdin);
-	for(i=0; i<total; i++){
+	inBank{
 		if(arr[i].balance < 100){
 			printf("info: ");
 			printf("\n\tAccount Number: %s", arr[i].account_no);
@@ -29,7 +29,7 @@ void below_100(bank arr[], int total){
 void deposit(bank arr[], int total, char *accnt, float amnt){
 	int i;
 	inBank{
-		if(arr[i].account_no == accnt){
+		if((strcmp(arr[i].account_no, accnt))==0){
 			arr[i].balance += amnt;
 			printf("\nDeposited. Your balance: %f", arr[i].balance);
 		}
