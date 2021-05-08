@@ -1,0 +1,7 @@
+line 1 of file a
+line 1 of file b
+line 2 of file a
+line 2 of file b
+line 3 of file aline 3 of file b
+line 4 of file b
+line 5 of file b

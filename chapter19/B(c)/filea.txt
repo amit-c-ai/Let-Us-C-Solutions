@@ -1,0 +1,3 @@
+line 1 of file a
+line 2 of file a
+line 3 of file a
