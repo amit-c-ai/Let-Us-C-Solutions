@@ -2,14 +2,15 @@
 
    (a)
    program:
+   
     /* let file name be test.c */
     #include<stdio.h>
 	int main(){
-		char ch, str[10];
-		while((ch=fgetc(stdin)) != -1){
-			fputc(ch, stdout);
-		}
-		return 0;
+	    char ch, str[10];
+	    while((ch=fgetc(stdin)) != -1){
+		fputc(ch, stdout);
+	    }
+	    return 0;
 	}
 	
    Copy the contents of one file into another :
@@ -35,9 +36,10 @@
 	And output the text on screen.
 	
    (b)
+   
     1. False
-	2. False
-	3. True
+    2. False
+    3. True
    
   
     
