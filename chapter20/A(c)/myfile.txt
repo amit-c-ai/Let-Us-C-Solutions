@@ -1,0 +1,4 @@
+This is the file because it contains the the the the.
+In command write the as old word and naruto as new word.
+ex. change the naruto myfile.txt.
+This will change all the to naruto.
