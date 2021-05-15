@@ -1,10 +1,39 @@
 ## Let us C solutions (17th Edition)
 
-  **S. no.**   | **Chapter name**  | **Excercise** 
----------------|--------------|--------------
- 1 |Getting Started|[click here](https://github.com/amit-c-ai/CP/blob/main/Solutions/1.cpp)|69A
- 2 |C Instructions|[click here](https://github.com/amit-c-ai/CP/blob/main/Solutions/2.cpp)|263A
- 3 |Decision Control Instruction|[click here](https://github.com/amit-c-ai/CP/blob/main/Solutions/3.cpp)|266B
- 4 |More Complex Decision Making|[click here](https://github.com/amit-c-ai/CP/blob/main/Solutions/4.cpp)|32B
- 5 |Loop Control Instruction|[click here](https://github.com/amit-c-ai/CP/blob/main/Solutions/5.cpp)|271A
- 6 |More Complex Repetitions|[click here](https://github.com/amit-c-ai/CP/blob/main/Solutions/6.cpp)|275A
+### You can read summary of all chapter [here](<link href="https://cdn.heyzine.com/release/heyzine.css" rel="stylesheet"> <div ontouchstart="this.classList.toggle('hover');" class="heyzine-flip" style="max-width: 400px;"><div class="container"><div class="front"><img src="https://cdn.heyzine.com/files/uploaded/029497fdedaea070c12cc0ed787a62d693ac3862.pdf-thumb.jpg" class="img-front fp-thumb"> <div class="inner"><h5 class="fp-title">Summary to C</h5></div></div> <div class="back"><img src="https://cdn.heyzine.com/files/uploaded/029497fdedaea070c12cc0ed787a62d693ac3862.pdf-thumb.jpg" class="img-back fp-thumb"> <div class="inner"><p><span class="fp-subtitle">let us c</span><br> <a href="https://heyzine.com/flip-book/029497fded.html" class="fp-link">View</a></p></div></div></div></div>)
+
+<table>
+<tr><th>Part 1</th><th>Part 2</th></tr>
+<tr><td>
+
+|Sr. no.| Chapter name | Excercise |
+|--|--|--|
+|1| Getting Started | [click here](https://github.com/amit-c-ai/C/tree/main/Excercise/chapter1) |
+|2| C Instructions | [click here](https://github.com/amit-c-ai/C/tree/main/Excercise/chapter2) |
+|3| Decision Control Instruction | [click here](https://github.com/amit-c-ai/C/tree/main/Excercise/chapter3) |
+|4| More Complex Decision Making | [click here](https://github.com/amit-c-ai/C/tree/main/Excercise/chapter4) |
+|5| Loop Control Instruction | [click here](https://github.com/amit-c-ai/C/tree/main/Excercise/chapter5) |
+|6| More Complex Repetition | [click here](https://github.com/amit-c-ai/C/tree/main/Excercise/chapter6) |
+|7| Case Control Instruction | [click here](https://github.com/amit-c-ai/C/tree/main/Excercise/chapter7) |
+|8| Functions | [click here](https://github.com/amit-c-ai/C/tree/main/Excercise/chapter8) |
+|9| Pointers | [click here](https://github.com/amit-c-ai/C/tree/main/Excercise/chapter9) |
+|10| Recursion | [click here](https://github.com/amit-c-ai/C/tree/main/Excercise/chapter10) |
+|11| Data Types Revisited | [click here](https://github.com/amit-c-ai/C/tree/main/Excercise/chapter11) |
+
+</td><td>
+
+|Sr. no.| Chapter name | Excercise | 
+|--|--|--|
+|12| The C Preprocessor | [click here](https://github.com/amit-c-ai/C/tree/main/Excercise/chapter12) |
+|13| Arrays | [click here](https://github.com/amit-c-ai/C/tree/main/Excercise/chapter13) |
+|14| Multidimentional Array | [click here](https://github.com/amit-c-ai/C/tree/main/Excercise/chapter14) |
+|15| Strings | [click here](https://github.com/amit-c-ai/C/tree/main/Excercise/chapter15) |
+|16| Handling Multiple Strings | [click here](https://github.com/amit-c-ai/C/tree/main/Excercise/chapter16) |
+|17| Structures | [click here](https://github.com/amit-c-ai/C/tree/main/Excercise/chapter17) |
+|18| Console Input/Output | [click here](https://github.com/amit-c-ai/C/tree/main/Excercise/chapter18) |
+|19| File Input/Output | [click here](https://github.com/amit-c-ai/C/tree/main/Excercise/chapter19) |
+|20| More Issues In Input/Output | [click here](https://github.com/amit-c-ai/C/tree/main/Excercise/chapter20) |
+|21| Operation On Bits | [click here](https://github.com/amit-c-ai/C/tree/main/Excercise/chapter21) |
+|22| Miscllaneous Features | [click here](https://github.com/amit-c-ai/C/tree/main/Excercise/chapter22) |
+
+</td></tr> </table>
