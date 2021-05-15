@@ -1,6 +1,6 @@
 ## Let us C solutions (17th Edition)
 
-### You can read summary of all chapter [here](https://github.com/amit-c-ai/C/blob/main/Excercise/index..html) 
+### You can read summary of all chapter [here](https://github.com/amit-c-ai/C/blob/main/Excercise/index.html) 
 
 <table>
 <tr><th>Part 1</th><th>Part 2</th></tr>
