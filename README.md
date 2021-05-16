@@ -39,3 +39,5 @@
 |22| Miscllaneous Features | [click here](https://github.com/amit-c-ai/C/tree/main/Excercise/chapter22) |
 
 </td></tr> </table>
+
+### [Special Problems](https://github.com/amit-c-ai/Let-Us-C-Solutions/tree/main/Excercise/special%20problems)
