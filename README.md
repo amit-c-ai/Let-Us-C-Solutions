@@ -2,7 +2,7 @@
 
 ### You can read summary of all chapters [here](https://amit-c-ai.github.io/Summary-to-C/) 
 
-##Following table contains solution to all excercice's questions in all chapters
+## Following table contains solution to all excercice's questions in all chapters
 
 <table>
 <tr><th>Part 1</th><th>Part 2</th></tr>
