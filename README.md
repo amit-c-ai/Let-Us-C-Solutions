@@ -1,6 +1,6 @@
 ## Let us C solutions (17th Edition)
 
-### You can read summary of all chapters [here](https://amit-c-ai.github.io/Summary-to-C/) 
+### You can read summary of all chapters [here](https://amit-c-ai.github.io/C-solutions/) 
 
 ## Following table contains solution to all excercice's questions in all chapters
 
@@ -39,3 +39,5 @@
 |22| Miscllaneous Features | [click here](https://github.com/amit-c-ai/C/tree/main/Excercise/chapter22) |
 
 </td></tr> </table>
+
+### [Special Problems](https://github.com/amit-c-ai/Let-Us-C-Solutions/tree/main/Excercise/special%20problems)
