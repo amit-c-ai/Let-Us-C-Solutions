@@ -1,6 +1,6 @@
 ## Let us C solutions (17th Edition)
 
-### You can read summary of all chapters [here](https://amit-c-ai.github.io/C-solutions/) 
+### You can read summary of all chapters [here](https://amit-c-ai.github.io/Let-Us-C-Solutions/) 
 
 ## Following table contains solution to all excercice's questions in all chapters
 
