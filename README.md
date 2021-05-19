@@ -4,6 +4,8 @@
 
 ## Following table contains solution to all excercice's questions in all chapters
 
+[<img src="https://github.com/amit-c-ai/Let-Us-C-Solutions/blob/main/frontpage.PNG">](https://amit-c-ai.github.io/Let-Us-C-Solutions/book.html)
+
 <table>
 <tr><th>Part 1</th><th>Part 2</th></tr>
 <tr><td>
