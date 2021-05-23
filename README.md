@@ -3,6 +3,9 @@
 ## You can refer the book below for questions
 
    [<img src="assets\img\full_book.png" width="300px">](https://amit-c-ai.github.io/Let-Us-C-Solutions/full_book.html)
+   
+   
+### You can read summary of all chapters [here](https://github.com/amit-c-ai/Let-Us-C-Solutions/blob/main/index.html)
 
 ## Following table contains solution to all excercice's questions in all chapters
 
