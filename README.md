@@ -2,11 +2,11 @@
 
 ## You can refer the book below for questions
 
-[<img src="assets\img\full_book.png" width="300px">](https://amit-c-ai.github.io/Let-Us-C-Solutions/full_book.html)
+    [<img src="assets\img\full_book.png" width="300px">](https://amit-c-ai.github.io/Let-Us-C-Solutions/full_book.html)
 
 ## Summary of all chapters
 
-[<img src="assets\img\summary.png" width="300px" align="left">](https://amit-c-ai.github.io/Let-Us-C-Solutions/index.html)
+    [<img src="assets\img\summary.png" width="300px" align="left">](https://amit-c-ai.github.io/Let-Us-C-Solutions/index.html)
 
 ## Following table contains solution to all excercice's questions in all chapters
 
